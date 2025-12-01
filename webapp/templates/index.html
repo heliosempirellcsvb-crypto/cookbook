@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Script Reclaimer & Merger</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Reclaimed Scripts & Notebooks</h1>
+    <ul>
+        {% for script in scripts %}
+        <li>
+            {{ script }} —
+            <a href="/download/{{ script }}">Download</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <hr>
+    <h2>Support / Donation</h2>
+    <p>
+        Send payments or donations via Google Wallet:<br>
+        <strong>{{ wallet_email }}</strong><br>
+        <a href="{{ wallet_link }}" target="_blank">Google Wallet Link</a>
+    </p>
+</body>
+</html>
